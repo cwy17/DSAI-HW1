@@ -142,5 +142,6 @@ if __name__ == '__main__':
     #print(pd.DataFrame(A))
     with open('submission.csv', 'w', newline='',encoding="utf-8") as csvfile:
             writer = csv.writer(csvfile)
-            for i in range(len(sgdr_result_predict)):
+            for i in range(len(sgdr_result_predict)):   #調整
+                A[i][1] = A[i][1] - sum_sgdr
                 writer.writerow(A[i])
